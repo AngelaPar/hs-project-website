@@ -1,0 +1,380 @@
+:root {
+  --white: #FFFFF0;
+  --dirty-white: #E0E0E0;
+  --dark-gray: #ababab;
+  --light-gray: #808080;
+  --dark-bg: #222222;
+  --light-bg: #333333;
+  --yellow: #bac964;
+  --black: #040504;
+  --blue:#1AEBFF;
+  --dark-blue: #12B0B3;
+  --green: #61F05E;
+  --dark-green: #48BF47;
+  --yellow: #FFC25D;
+  --dark-yellow: #EBB154;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+a:focus, select:focus, input[type=file]:focus {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.button:focus {
+  filter: brightness(1.3);
+  -webkit-filter: brightness(1.3);
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--light-bg);
+}
+
+body {
+  background-color: var(--white);
+  
+}
+
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem 9%;
+  z-index: 100;
+}
+/*
+#navbar {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 100;
+}
+*/
+
+
+#navbar a {
+  font-size: 2rem;
+  color: var(--white);
+  padding: 0 2rem;
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.header .menu {
+  font-size: 2.5rem;
+  color: var(--white);
+  cursor: pointer;
+  text-align: left;
+  display: none;
+}
+
+.header.active {
+  background-color: var(--white);
+  padding: 3rem 9%;
+}
+
+.header.active .navbar a {
+  color: var(--dark-bg);
+}
+
+.header.active .navbar a:hover {
+  color: var(--green);
+}
+
+.header.active .menu {
+  color: var(--dark-bg);
+}
+/* header */
+
+section {
+  padding: 5rem 9%;
+}
+
+
+.button {
+  appearance: button;
+  background-color: var(--dark-blue);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 25px 5px 25px 5px;
+  outline: none;
+  overflow: visible;
+  padding: 24px 21px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:after {
+  background-clip: padding-box;
+  background-color: var(--blue);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button:main,
+.button:focus {
+  user-select: auto;
+}
+
+.button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button:disabled {
+  cursor: auto;
+}
+
+* {
+  font-family: 'Segoe UI';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+
+.tutorials *, .services * {
+  transition: 0.2s linear;  
+}
+
+.primary-button {
+  background-color: var(--dark-blue);
+}
+
+.primary-button:after {
+  background-color: var(--blue);	
+}
+
+.secondary-button { 
+  background-color: var(--dark-green);
+}
+
+.secondary-button:after { 
+  background-color: var(--green);
+}
+
+.mg-top-2 {
+	margin-top: 2rem;
+}
+
+.header.scrolled #nav-btn {
+  background-color: var(--dark-blue) !important;
+  color:  var(--white);
+  border-color: var(--white);
+  transition: background-color 0.2s ease-out;
+}
+.header.scrolled #nav-btn:hover {
+  background-color: var(--white) !important;
+  color:  var(--dark-blue);
+  border-color: var(--white);
+  transition: background-color 0.2s ease-out;
+}
+
+/* mobile nav */
+body {
+  animation: bugfix infinite 1s;
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+#overlay-button {
+  position: absolute;
+  right: 2em;
+  top: 3em;
+  padding: 26px 11px;
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+}
+#overlay-button span {
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  background-color: white;
+  position: relative;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+#overlay-button span:before {
+  top: -10px;
+  visibility: visible;
+}
+#overlay-button span:after {
+  top: 10px;
+}
+#overlay-button span:before, #overlay-button span:after {
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  background-color: white;
+  position: absolute;
+  content: "";
+  transition: all 0.2s ease-in-out;
+}
+#overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+  background: #333332;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]:checked ~ #overlay {
+  visibility: visible;
+}
+input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+  background: transparent;
+}
+input[type=checkbox]:checked ~ #overlay-button span:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  opacity: 1;
+}
+input[type=checkbox]:checked ~ #overlay-button span:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  background: var(--dark-blue);
+  z-index: 2;
+  visibility: hidden;
+  position: fixed;
+}
+#overlay.active {
+  visibility: visible;
+}
+#overlay ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  padding-left: 0;
+  list-style-type: none;
+}
+#overlay ul li {
+  padding: 1em;
+}
+#overlay ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+#overlay ul li a:hover {
+  color: #333332;
+}
+
+@media screen and (max-width: 768px) {
+}
+.header .navbar a {
+	color: var(--black);
+}
+
+/* responsive navbar */
+#navbar {
+	position: fixed;
+	background-color: var(--dark-blue);
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.25s ease-out;
+  z-index: 100;  
+}
+#navbar a {
+  font-weight: bolder;
+}
+
+
+.absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 250px; /* Need a specific value to work */
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+#nav-btn {
+	color: var(--white);
+  padding: 0 0.35em 0.15em 0.35em;
+  font-size: 2.5em;
+  border: 0.15em solid var(--white);
+  border-radius: 0.15em;
+  background: none;
+  transition: 0.3s;
+  font-weight: bolder;
+  cursor: pointer;
+}
+#nav-btn:hover {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+.header {
+	z-index: 1000;
+}

@@ -103,7 +103,7 @@ label {
 
 .logocontainer img{
   display: block;
-  margin: 3vh auto 3vh auto;
+  margin: 5vh auto 0 auto;
   height: 10vh;
 }
 
@@ -174,4 +174,8 @@ label {
 	}
 }
 
-
+@media screen and (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+}
